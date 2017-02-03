@@ -1,0 +1,25 @@
+﻿<div class="site-wrapper" ng-controller="shortnerController">
+    <div class="site-wrapper-inner">
+        <div class="main-container">
+            <div class="inner cover">
+                <span class="glyphicon glyphicon-link"></span>
+                <h1>URL Shortener</h1>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group input-group-lg">
+                            <input id="url-field" required type="text" class="form-control" placeholder="Paste a link..." ng-model="url">
+                            <span class="input-group-btn">
+                                <button class="btn btn-shorten" type="button" ng-click="shorten(url)">SHORTEN</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" ng-show="shortUrl">
+                        <div id="link"><a href="/{{shortUrl}}">{{shortUrl}}</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
